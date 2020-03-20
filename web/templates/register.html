@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+     <div class="container">
+      <form class="form-signin" method="post" action="{{ url_for('.register') }}">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label class="control-label">Username</label>
+        <input type="text" id="inputUsername" class="form-control" name="username" value="gua" required autofocus>
+        <label class="control-label">Password</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" value="123"
+               placeholder="Password" required>
+          <label class="control-label">邮箱</label>
+          <input type="text" class="input-xlarge" name="email"><br>
+
+        <button class="btn btn-primary" type="submit">Register</button>
+      </form>
+
+    </div> <!-- /container -->
+{% endblock %}

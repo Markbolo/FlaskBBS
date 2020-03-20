@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Find Password
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <form class="form-signin" method="post" action="{{ url_for('.reset') }}">
+        <h2 class="form-signin-heading">Find Password</h2>
+        <label class="control-label">Username</label>
+        <input type="text" id="inputUsername" class="form-control"
+               name="username" value="gua" required autofocus>
+        <button class="btn btn-primary" type="submit">找回密码</button>
+      </form>
+    </div> <!-- /container -->
+{% endblock %}

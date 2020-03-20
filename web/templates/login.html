@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+     <div class="container">
+      <form class="form-signin" method="post" action="{{ url_for('.login') }}">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label class="control-label">Username</label>
+        <input type="text" id="inputUsername" class="form-control" name="username" value="gua" required autofocus>
+        <label class="control-label">Password</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" value="123"
+               placeholder="Password" required>
+        <button class="btn btn-primary" type="submit">Login</button>
+           <a href="{{ url_for('index.register') }}">没有账号？注册一个</a>
+                            <a id="forgot_password" href="{{ url_for('index.reset_password') }}">忘记密码了?</a>
+      </form>
+
+    </div> <!-- /container -->
+{% endblock %}
